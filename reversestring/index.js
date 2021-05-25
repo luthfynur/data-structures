@@ -6,4 +6,13 @@ function reverseString(str) {
   return reversedString;
 }
 
-module.exports = reverseString;
+function reverseStringTwo(str) {
+  return str.split("").reduce((rev, char) => {
+    return char + rev;
+  }, "");
+}
+
+module.exports = {
+  reverseString,
+  reverseStringTwo,
+};
